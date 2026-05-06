@@ -1,0 +1,54 @@
+.cheatsheet {
+  border-top: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-card) 100%);
+}
+
+.cheat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.cheat-group {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.cheat-group-header {
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+}
+
+.cheat-list {
+  list-style: none;
+  padding: 0.5rem 0;
+}
+
+.cheat-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.55rem 1.25rem;
+  transition: background 0.15s;
+}
+
+.cheat-row:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+.cheat-cmd {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  color: var(--accent-green);
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: 200px;
+}
+
+.cheat-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}

@@ -1,0 +1,11 @@
+.core-concepts {
+  border-top: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg) 100%);
+}
+
+.concept-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}

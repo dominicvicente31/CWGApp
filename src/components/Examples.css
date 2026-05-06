@@ -1,0 +1,128 @@
+.examples {
+  border-top: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg) 100%);
+}
+
+.ex-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.ex-tab {
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.ex-tab:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+.ex-tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0d1117;
+  font-weight: 600;
+}
+
+.ex-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ex-desc {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.02);
+}
+
+.ex-body {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+}
+
+.ex-history {
+  border-right: 1px solid var(--border);
+}
+
+.ex-history-label {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  background: rgba(255,255,255,0.015);
+}
+
+.ex-steps {
+  padding: 1rem 0;
+}
+
+.ex-step {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.45rem 1.25rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  transition: background 0.15s;
+}
+
+.ex-step:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.step-cmd {
+  color: var(--text);
+  flex: 1;
+}
+
+.step-commit .step-cmd { color: var(--accent); }
+.step-branch .step-cmd { color: var(--accent-purple); }
+.step-merge  .step-cmd { color: var(--accent-green); }
+.step-tag    .step-cmd { color: var(--accent-orange); }
+.step-cherry .step-cmd { color: var(--accent-red); }
+.step-revert .step-cmd { color: var(--accent-orange); }
+
+/* Output panel */
+.ex-output {
+  display: flex;
+  flex-direction: column;
+}
+
+.ex-out-block {
+  flex: 1;
+  padding: 1.25rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  color: var(--accent-green);
+  line-height: 1.8;
+  white-space: pre-wrap;
+  background: #0d1117;
+}
+
+@media (max-width: 700px) {
+  .ex-body {
+    grid-template-columns: 1fr;
+  }
+  .ex-history {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .ex-step {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+}
